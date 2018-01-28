@@ -76,28 +76,12 @@ let bindEventTwitterAdd = function() {
 }
 
 let bindEventTwitterDelete = function() {
-    /*
-    给 删除 按钮绑定删除的事件
-    1, 绑定事件
-    2, 删除整个 twitter-cell 元素
-    */
     let twitterList = _e('.twitter-list')
-    // 事件响应函数会被传入一个参数, 就是事件本身
     twitterList.addEventListener('click', function(event) {
-        // log('click twitterlist', event)
-        // 我们可以通过 event.target 来得到被点击的元素
         let self = event.target
-        // log('被点击的元素是', self)
-        // 通过比较被点击元素的 class 来判断元素是否是我们想要的
-        // classList 属性保存了元素的所有 class
-        // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
-        // log(self.classList)
-        // 判断是否拥有某个 class 的方法如下
         if(self.classList.contains('twitter-delete')) {
             log('点到了 删除按钮，id 是', self.dataset.twitterId)
             let twitterId = self.dataset.twitterId
-            // 删除 self 的父节点
-            // parentElement 可以访问到元素的父节点
             apiTwitterDelete(twitterId, function() {
                 self.parentElement.parentElement.remove()
             })
@@ -109,20 +93,10 @@ let bindEventTwitterDelete = function() {
 
 let bindEventTwitterEdit = function() {
     let twitterList = _e('.twitter-list')
-    // 事件响应函数会被传入一个参数, 就是事件本身
     twitterList.addEventListener('click', function(event) {
-        // log('click twitterlist', event)
-        // 我们可以通过 event.target 来得到被点击的元素
         let self = event.target
-        // log('被点击的元素是', self)
-        // 通过比较被点击元素的 class 来判断元素是否是我们想要的
-        // classList 属性保存了元素的所有 class
-        // 在 HTML 中, 一个元素可以有多个 class, 用空格分开
-        // log(self.classList)
-        // 判断是否拥有某个 class 的方法如下
         if(self.classList.contains('twitter-edit')) {
             log('点到了 编辑按钮，id 是', self.dataset.twitterId)
-            // 插入编辑输入框
             insertTwitterUpdate(self)
         } else {
             log('点击的不是编辑按钮******')
