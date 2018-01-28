@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel='stylesheet' href='/twitter/static/base/css/base.css' class='coreCSSBundles'>
+
+    <title>注册/登录</title>
+</head>
+<body class="three-col logged-out ms-windows asian zh-cn front-page-photo-set front-page no-nav-banners" dir="ltr">
+<div id="doc" class="">
+    <div class="front-bg">
+        <img class="front-image" src="/twitter/static/user/img/background.jpg" alt="">
+    </div>
+
+    <div class="global-nav">
+        <div class="global-nav-inner">
+            <div class="container">
+                <div role="navigation" style="display: inline-block;">
+                    <ul class="nav js-global-actions" id="global-actions">
+                        <li id="global-nav-home" class="home">
+                            <a class="js-nav js-tooltip js-dynamic-tooltip" href="/twitter/twitter/index">
+                                <span class="text" aria-hidden="true">主页</span>
+                            </a>
+                        </li>
+                        <li id="global-nav-about" class="home active">
+                            <a class="js-nav js-tooltip js-dynamic-tooltip" href="/twitter/user/welcome">
+                                <span class="text" aria-hidden="true">登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    d
+
+    <div id="page-outer">
+        <div id="page-container" class="AppContent  wrapper-front">
+            <div class="front-container front-container-full-signup" id="front-container">
+                <div class="front-card">
+                    <div class="front-welcome">
+                        <div class="front-welcome-text">
+                            <h1>欢迎使用 Twitter。</h1>
+                            <p>联系你的好友和更多精彩。获取你感兴趣的实时更新。并通过每个视角观看事件实时呈现。</p>
+                        </div>
+                    </div>
+
+                    <div class="front-signin js-front-signin">
+                        <h2><strong>已有账号?</strong> 登录</h2>
+                        <form action="/twitter/user/login" class="t1-form signin" method="post">
+                            <div class="username field">
+                                <input type="text" id="signin-email" class="text-input email-input"
+                                       name="username" autocomplete="username"
+                                       placeholder="用户名">
+                            </div>
+
+                            <table class="flex-table password-signin">
+                                <tbody>
+                                <tr>
+                                    <td class="flex-table-primary">
+                                        <div class="password flex-table-form">
+                                            <input type="password" id="signin-password"
+                                                   class="text-input flex-table-input" name="password"
+                                                   placeholder="密码" autocomplete="current-password">
+                                        </div>
+                                    </td>
+                                    <td class="flex-table-secondary">
+                                        <button type="submit"
+                                                class="submit EdgeButton EdgeButton--medium EdgeButton--secondary flex-table-btn js-submit">
+                                            登录
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </form>
+                    </div>
+                    <div class="front-signup js-front-signup">
+                        <h2><strong>初至 Twitter?</strong> 注册</h2>
+                        <form action="/twitter/user/register" class="t1-form signup" id="frontpage-signup-form"
+                              method="post">
+                            <div class="field">
+                                <input type="text" class="text-input" autocomplete="off" name="username" maxlength=""
+                                       placeholder="用户名">
+                            </div>
+                            <div class="field">
+                                <input type="password" class="text-input" name="password" placeholder="密码">
+                            </div>
+                            <button type="submit"
+                                    class="EdgeButton EdgeButton--medium EdgeButton--primary u-floatRight submit">
+                                注册
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

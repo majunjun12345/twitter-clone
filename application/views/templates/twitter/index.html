@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+
+    <link rel='stylesheet' href='/twitter/static/base/css/base.css' class='coreCSSBundles'>
+    <link rel='stylesheet' href='/twitter/static/twitter/css/twitter.css' class='coreCSSBundles'>
+
+    <title>Twitter</title>
+
+    <script>
+        const _username = function() {
+            return "{{ user.username }}"
+        }
+    </script>
+</head>
+<body class='three-col logged-in ms-windows enhanced-mini-profile supports-drag-and-drop' dir='ltr'>
+<div id='doc' class='route-home'>
+    <div class="global-nav" data-section-term="top_nav">
+        <div class="global-nav-inner">
+            <div class="container">
+                <div role="navigation" style="display: inline-block;">
+                    <ul class="nav js-global-actions" id="global-actions">
+                        <li id="global-nav-home" class="home active">
+                            <a class="js-nav js-tooltip js-dynamic-tooltip" href="/twitter/twitter/index">
+                                <span class="text" aria-hidden="true">主页</span>
+                            </a>
+                        </li>
+                        <li id="global-nav-home" class="home">
+                            <a class="js-nav js-tooltip js-dynamic-tooltip" href="/twitter/user/welcome">
+                                <span class="text" aria-hidden="true">登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='page-outer'>
+        <div id='page-container' class='AppContent wrapper wrapper-home'>
+            <div class='dashboard dashboard-left'>
+                <div class='DashboardProfileCard  module'>
+                    <a class='DashboardProfileCard-bg u-bgUserColor u-block' href='#'
+                       tabindex='-1' aria-hidden='true' rel='noopener'>
+                    </a>
+
+                    <div class='DashboardProfileCard-content'>
+                        <a class='DashboardProfileCard-avatarLink u-inlineBlock' href='#'
+                           title='profile' tabindex='-1' aria-hidden='true' rel='noopener'>
+                            <img class='DashboardProfileCard-avatarImage js-action-profile-avatar'
+                                 src='/twitter/static/twitter/img/avatar.png' alt=''>
+                        </a>
+
+                        <div class='DashboardProfileCard-userFields account-group'>
+                            <div class='DashboardProfileCard-name u-textTruncate'>
+                                <a class='u-textInheritColor js-nav' href='#'
+                                   rel='noopener'>{{ user.username }}</a>
+                            </div>
+                        </div>
+
+                        <div class='ProfileCardStats'></div>
+
+                        <div id='dashboard-profile-prompt'></div>
+                    </div>
+                </div>
+
+                <div class="Footer module roaming-module">
+                    <div class="flex-module Footer-adsModule">
+                        <div class="flex-module-footer u-table">
+                            <a class="u-tableCell u-alignMiddle" href="#" rel="noopener">
+                                源码地址
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div role='main' aria-labelledby='content-main-heading' class='content-main top-timeline-tweetbox'
+                 id='timeline' tabindex='-1'>
+                <div class='timeline-tweet-box'>
+                    <div class='home-tweet-box tweet-box component tweet-user'>
+                        <img class='top-timeline-tweet-box-user-image avatar size32'
+                             src='/twitter/static/twitter/img/avatar.png' alt='avatar'>
+                        <form class='t1-form tweet-form' method='post' target='tweet-post-iframe' action='#'>
+                            <div class='tweet-content'>
+                                <img class='inline-reply-user-image avatar size32'
+                                     src='/twitter/static/twitter/img/avatar.png' alt='user image'>
+
+                                <div class='RichEditor RichEditor--emojiPicker is-fakeFocus'>
+                                    <div class='RichEditor-mozillaCursorWorkaround'>&nbsp;</div>
+                                    <div class='RichEditor-container u-borderRadiusInherit'>
+                                        <div class='RichEditor-scrollContainer u-borderRadiusInherit'>
+                                            <div aria-labelledby='tweet-box-home-timeline-label'
+                                                 id='tweet-box-home-timeline' class='tweet-box rich-editor'
+                                                 contenteditable='true' spellcheck='true' role='textbox'
+                                                 aria-multiline='true' dir='ltr'
+                                                 aria-autocomplete='list' aria-expanded='false'
+                                                 aria-owns='typeahead-dropdown-4'>
+                                                <div id='id-div-twitter'>What’s happening?</div>
+                                            </div>
+
+                                            <div class='RichEditor-pictographs' aria-hidden='true'></div>
+                                        </div>
+                                    </div>
+                                    <div class='RichEditor-mozillaCursorWorkaround'>&nbsp;</div>
+                                </div>
+                            </div>
+
+                            <div class='TweetBoxToolbar'>
+                                <div class='TweetBoxToolbar-tweetButton tweet-button'>
+                                    <button id='id-button-add'
+                                            class='tweet-action EdgeButton EdgeButton--primary js-tweet-btn'
+                                            type='button'>
+                                        <span class='button-text tweeting-text'>
+                                            Tweet
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class='content-header visuallyhidden'>
+                    <div class='header-inner'>
+                        <h2 id='content-main-heading' class='js-timeline-title'>Tweets</h2>
+                    </div>
+                </div>
+                <div class='stream-container conversations-enabled'>
+                    <div class='stream'>
+                        <ol class='twitter-list stream-items js-navigable-stream' id='stream-items-id'></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src='/twitter/static/base/js/utils.js'></script>
+<script src='/twitter/static/twitter/js/api.js'></script>
+<script src='/twitter/static/twitter/js/comment.js'></script>
+<script src='/twitter/static/twitter/js/twitter.js'></script>
+</html>
