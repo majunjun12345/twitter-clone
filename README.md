@@ -21,12 +21,12 @@
 
 ## 注册、登录
 
-![](screencast/注册、登录.gif)
+![](screencasts/注册、登录.gif)
 
 ## 发表、编辑、删除
 
-![](screencast/发表、编辑、删除.gif)
+![](screencasts/发表、编辑、删除.gif)
 
 ## 发表评论、编辑评论、删除评论
 
-![](screencast/发表评论、编辑评论、删除评论.gif)
+![](screencasts/发表评论、编辑评论、删除评论.gif)
